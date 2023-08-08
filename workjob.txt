@@ -1,0 +1,62 @@
+workjob
+
+** users
+id | name | email | password | phone | image | address | is_active | type "client, freelancer"
+
+** admins
+id | name | email | password | role_id
+
+** projects
+id | user_id | title | description | price | price_type | duration | status
+
+** skills
+id | name
+
+** project_skill
+project_id | skill_id
+
+** proposals
+id | user_id | project_id | price | content | status
+
+** jobs
+id | user_id | project_id | price | final_price | status
+
+** reviews
+id | user_id | job_id | quality | skill | communication | availability | deadline
+
+** notifications
+
+** messages
+id | sender_id | reciever_id | message
+
+** certifications
+id | name
+
+** exams
+id | name | certification_id
+
+** questions
+id | title | exam_id
+
+** answers
+id | question_id | content | correct
+
+** user_exam
+user_id | exam_id
+
+** roles
+id | name
+
+** permissions
+id | name | code
+
+** role_permission
+role_id | permission_id
+
+** payments
+id | job_id | price | transaction_id | currency | payment_method
+
+
+
+
+paypal | stripe | hyperpay
