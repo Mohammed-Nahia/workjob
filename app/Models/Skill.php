@@ -10,4 +10,9 @@ class Skill extends Model
     use HasFactory;
 
     protected $guarded =[];
+
+    function projects() {
+        return $this->belongsToMany(Project::class);
+    }
+
 }

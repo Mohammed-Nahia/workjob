@@ -10,4 +10,8 @@ class Role extends Model
     use HasFactory;
 
     protected $guarded =[];
+
+    function admin() {
+        return $this->hasMany(Admin::class);
+    }
 }

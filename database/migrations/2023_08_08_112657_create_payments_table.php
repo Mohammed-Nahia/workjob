@@ -17,8 +17,8 @@ return new class extends Migration
             $table->double('price',10,2);
             $table->double('freelancer_fees',10,2);
             $table->double('final',10,2);
-            $table->double('transaction_id',10,2);
-            $table->double('payment_method',['paypal','stripe','hyperpay'])->default('paypal');
+            $table->string('transaction_id');
+            $table->enum('payment_method',['paypal','stripe','hyperpay'])->default('paypal');
             $table->timestamps();
         });
     }
